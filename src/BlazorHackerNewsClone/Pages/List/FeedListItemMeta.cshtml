@@ -1,0 +1,18 @@
+﻿<div>
+    <small class="text-muted">
+        @Points points by <a href="/user/@User">@User</a>
+        <a href="/item/@Id">@TimeAgo</a> | <a href="/item/@Id">@CommentsCount comments</a>
+    </small>
+</div>
+@functions{
+    [Parameter]
+    int Points { get; set; }
+    [Parameter]
+    string User { get; set; }
+    [Parameter]
+    int Id { get; set; }
+    [Parameter]
+    string TimeAgo { get; set; }
+    [Parameter]
+    int CommentsCount { get; set; }
+}

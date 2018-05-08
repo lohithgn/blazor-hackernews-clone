@@ -1,0 +1,26 @@
+﻿@page "/item/{ItemId}"
+
+@inherits ItemModel
+
+@if (Item == null)
+{
+    <div>Loading...</div>
+}
+else
+{
+    <div>
+        <ItemTitle Title="@Item.title" Domain="@Item.domain"></ItemTitle>
+        <ItemMeta CommentsCount="@Item.comments_count" Id="@Item.id" Points="@Item.points"
+                  TimeAgo="@Item.time_ago" Title="@Item.title" User="@Item.user"></ItemMeta>
+    </div>
+    <div>
+        <hr />
+    </div>
+    <div>
+        @foreach (var comment in Item.comments)
+        {
+            <ItemComment Level="1" Comment="@comment"></ItemComment>
+        }
+    </div>
+
+}

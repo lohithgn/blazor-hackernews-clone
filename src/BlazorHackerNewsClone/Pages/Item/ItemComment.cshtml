@@ -1,0 +1,25 @@
+﻿<div>
+    <h6><small><a href="/user/@Comment.user">@Comment.user</a> @Comment.time_ago </small></h6>
+    <div>
+        <small>
+            <HtmlView Content="@Comment.content"></HtmlView>
+        </small>
+        @foreach (var comment in Comment.comments)
+        {
+            <div style="margin-left:25px">
+                <ItemComment Level="@(Level+1)" Comment="@comment"></ItemComment>
+            </div>
+        }
+    </div>
+    @if (Level == 1)
+    {
+        <hr />
+    }
+</div>
+
+@functions {
+    [Parameter]
+    Comment Comment { get; set; }
+    [Parameter]
+    int Level { get; set; }
+}

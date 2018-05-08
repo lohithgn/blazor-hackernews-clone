@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27701.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHackerNewsClone", "BlazorHackerNewsClone\BlazorHackerNewsClone.csproj", "{52507EA2-89FF-433F-A3C8-458E9CC573CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52507EA2-89FF-433F-A3C8-458E9CC573CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52507EA2-89FF-433F-A3C8-458E9CC573CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52507EA2-89FF-433F-A3C8-458E9CC573CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52507EA2-89FF-433F-A3C8-458E9CC573CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97AACA74-AF4D-4E23-956E-7E3AB2366930}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,37 @@
+﻿@page "/"
+@page  "/{Feed}"
+@inherits IndexModel
+
+<div class="clearfix ml-3 mt-2">
+    <div class="float-left">
+        @if (FeedItems != null)
+        {
+            <Pager CurrentPage="@Page" ItemCount="@FeedItems.Count"
+                   OnPreviousClick="@(async () => await OnPrevClick())"
+                   OnNextClick="@(async () => await OnMoreClick())"></Pager>
+        }
+    </div>
+    <div class="float-right">
+        @if (IsBusy)
+        {
+            <div>Loading items...</div>
+        }
+    </div>
+</div>
+@if (FeedItems != null)
+{
+    <div class="mt-2">
+        <ol start="@((Page * PageSize) - PageSize + 1)">
+            @foreach (var item in FeedItems)
+            {
+                <li>
+                    <FeedListItemTitle Url="@item.url" Title="@item.title" Domain="@item.domain"></FeedListItemTitle>
+                    <FeedListItemMeta Id="@item.id" CommentsCount="@item.comments_count"
+                                      Points="@item.points" TimeAgo="@item.time_ago"
+                                      User="@item.user"></FeedListItemMeta>
+                    <hr class="mt-2 mb-2" />
+                </li>
+            }
+        </ol>
+    </div>
+}

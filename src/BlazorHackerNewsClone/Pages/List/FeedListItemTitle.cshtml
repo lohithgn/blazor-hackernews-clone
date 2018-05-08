@@ -1,0 +1,15 @@
+﻿<small>
+    <b><a href="@Url" target="_blank">@Title</a></b>
+    @if (!string.IsNullOrEmpty(Domain))
+    {
+        <small>(<a href="https://news.ycombinator.com/from?site=@Domain">@Domain</a>)</small>
+    }
+</small>
+@functions{
+    [Parameter]
+    string Url { get; set; }
+    [Parameter]
+    string Title { get; set; }
+    [Parameter]
+    string Domain { get; set; }
+}

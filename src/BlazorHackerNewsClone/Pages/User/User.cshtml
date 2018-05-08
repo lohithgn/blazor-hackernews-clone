@@ -1,0 +1,28 @@
+﻿@page "/user/{UserId}"
+
+@inherits UserModel
+
+@if (CurrentUser != null)
+{
+    <div>
+        <h3>User: <b>@CurrentUser.id</b></h3>
+    </div>
+    <div>
+        <h6>Created: @CurrentUser.created</h6>
+    </div>
+    <div>
+        <h6>Karma: @CurrentUser.karma</h6>
+    </div>
+    <div>
+        <h6>About: <HtmlView Content="@CurrentUser.about"></HtmlView></h6>
+    </div>
+    <div>
+        <a href="https://news.ycombinator.com/submitted?id=@CurrentUser.id">submissions</a><br />
+        <a href="https://news.ycombinator.com/threads?id=@CurrentUser.id">comments</a><br />
+        <a href="https://news.ycombinator.com/favorites?id=@CurrentUser.id">favorites</a>
+    </div>
+}
+else
+{
+    <div>Loading...</div>
+}

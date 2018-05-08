@@ -1,0 +1,20 @@
+﻿<small>
+    @Points points by <a href="/user/@User">@User</a> <a href="/item/@Id">@TimeAgo</a>
+    | <a target="_blank" href="https://hn.algolia.com/?query=@Title&sort=byDate&dateRange=all&type=story&storyText=false&prefix&page=0">past</a>
+    | <a target="_blank" href="https://www.bing.com/search?q=@Title">web</a>
+    | <a href="/item/@Id">@CommentsCount comments</a>
+</small>
+@functions{
+    [Parameter]
+    int Points { get; set; }
+    [Parameter]
+    int CommentsCount { get; set; }
+    [Parameter]
+    string User { get; set; }
+    [Parameter]
+    int Id { get; set; }
+    [Parameter]
+    string TimeAgo { get; set; }
+    [Parameter]
+    string Title { get; set; }
+}

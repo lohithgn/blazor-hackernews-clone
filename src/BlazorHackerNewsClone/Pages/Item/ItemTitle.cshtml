@@ -1,0 +1,13 @@
+﻿<h3>
+    @Title
+    @if (!string.IsNullOrEmpty(Domain))
+    {
+        <small>(<a href="https://news.ycombinator.com/from?site=@Domain">@Domain</a>)</small>
+    }
+</h3>
+@functions {
+    [Parameter]
+    string Title { get; set; }
+    [Parameter]
+    string Domain { get; set; }
+}
