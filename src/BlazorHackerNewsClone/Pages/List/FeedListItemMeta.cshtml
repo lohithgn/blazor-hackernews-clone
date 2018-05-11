@@ -1,7 +1,9 @@
 ﻿<div>
     <small class="text-muted">
-        @Points points by <a href="/user/@User">@User</a>
-        <a href="/item/@Id">@TimeAgo</a> | <a href="/item/@Id">@CommentsCount comments</a>
+        <span class="oi oi-heart meta-icon"></span> @Points points  
+        <span class="oi oi-person meta-icon pl-3"></span> <a href="/user/@User">@User</a>
+        <span class="oi oi-clock meta-icon pl-3"></span> <a class="pr-3" href="/item/@Id">@TimeAgo</a>
+        <a href="/item/@Id" class="badge badge-pill badge-info">@CommentsCount comments</a>
     </small>
 </div>
 @functions{

@@ -1,8 +1,13 @@
 ﻿<small>
-    @Points points by <a href="/user/@User">@User</a> <a href="/item/@Id">@TimeAgo</a>
-    | <a target="_blank" href="https://hn.algolia.com/?query=@Title&sort=byDate&dateRange=all&type=story&storyText=false&prefix&page=0">past</a>
-    | <a target="_blank" href="https://www.bing.com/search?q=@Title">web</a>
-    | <a href="/item/@Id">@CommentsCount comments</a>
+    <span class="oi oi-heart meta-icon"></span> @Points points 
+    <span class="oi oi-person meta-icon pl-3"></span><a class="pl-1" href="/user/@User">@User</a> 
+    <span class="oi oi-clock meta-icon pl-3"></span><a class="pl-1" href="/item/@Id">@TimeAgo</a>
+    <span class="pl-3 pr-3"> | </span>
+    <a target="_blank" href="https://hn.algolia.com/?query=@Title&sort=byDate&dateRange=all&type=story&storyText=false&prefix&page=0">past</a>
+    <span class="pl-3 pr-3"> | </span>
+    <a target="_blank" href="https://www.bing.com/search?q=@Title">web</a>
+    <span class="pl-3 pr-3"> | </span>
+    <a href="/item/@Id" class="badge badge-pill badge-info">@CommentsCount comments</a>
 </small>
 @functions{
     [Parameter]
