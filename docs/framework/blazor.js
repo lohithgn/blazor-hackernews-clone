@@ -361,7 +361,7 @@ function boot() {
                     }
                     loadAssemblyUrls = [entryPointDll]
                         .concat(referenceAssemblies)
-                        .map(function (filename) { return "_framework/_bin/" + filename; });
+                        .map(function (filename) { return "framework/bin/" + filename; });
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, , 4]);
@@ -540,7 +540,7 @@ function findMethod(assemblyName, namespace, className, methodName) {
 function addScriptTagsToDocument() {
     // Load either the wasm or asm.js version of the Mono runtime
     var browserSupportsNativeWebAssembly = typeof WebAssembly !== 'undefined' && WebAssembly.validate;
-    var monoRuntimeUrlBase = '_framework/' + (browserSupportsNativeWebAssembly ? 'wasm' : 'asmjs');
+    var monoRuntimeUrlBase = 'framework/' + (browserSupportsNativeWebAssembly ? 'wasm' : 'asmjs');
     var monoRuntimeScriptUrl = monoRuntimeUrlBase + "/mono.js";
     if (!browserSupportsNativeWebAssembly) {
         // In the asmjs case, the initial memory structure is in a separate file we need to download
@@ -553,8 +553,8 @@ function addScriptTagsToDocument() {
 }
 function createEmscriptenModuleInstance(loadAssemblyUrls, onReady, onError) {
     var module = {};
-    var wasmBinaryFile = '_framework/wasm/mono.wasm';
-    var asmjsCodeFile = '_framework/asmjs/mono.asm.js';
+    var wasmBinaryFile = 'framework/wasm/mono.wasm';
+    var asmjsCodeFile = 'framework/asmjs/mono.asm.js';
     module.print = function (line) { return console.log("WASM: " + line); };
     module.printErr = function (line) { return console.error("WASM: " + line); };
     module.preRun = [];
