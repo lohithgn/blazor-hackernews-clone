@@ -10,10 +10,10 @@ namespace BlazorHackerNewsClone.Pages
 {
     public class IndexModel : BlazorComponent
     {
-        [Inject()]
+        [Inject]
         IUriHelper UriHelper { get; set; }
 
-        [Inject()]
+        [Inject]
         HackerNewsServiceClient Client { get; set; }
 
         [Parameter]
@@ -38,33 +38,27 @@ namespace BlazorHackerNewsClone.Pages
             IsBusy = true;
             StateHasChanged();
             FeedItems = await Client.GetFeed(topic, page);
+            Page = page;
             IsBusy = false;
             StateHasChanged();
         }
 
         private async void OnLocationChanged(object sender, string e)
         {
-            ResetPage();
             Debug.WriteLine($"Feed:{Feed}");
             Debug.WriteLine($"e:{e}");
-            await LoadFeed(Feed, Page);
+            await LoadFeed(Feed, 1);
         }
 
         public async Task OnMoreClick()
         {
-            IncrementPage();
-            await LoadFeed(Feed, Page);
+            await LoadFeed(Feed, Page + 1);
         }
 
         public async Task OnPrevClick()
         {
-            DecrementPage();
-            await LoadFeed(Feed, Page);
+            await LoadFeed(Feed, Page - 1);
         }
-
-        private void ResetPage() => Page = 1;
-        private void IncrementPage() => ++Page;
-        private void DecrementPage() => --Page;
 
         public void Dispose() => UriHelper.OnLocationChanged -= OnLocationChanged;
     }
