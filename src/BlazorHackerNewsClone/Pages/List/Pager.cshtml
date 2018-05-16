@@ -1,19 +1,6 @@
-﻿@if (CurrentPage < 2)
-{
-    <button type="button" class="btn btn-link btn-xs" disabled="disabled">&larr; Prev</button>
-}
-else
-{
-    <button type="button" class="btn btn-link btn-xs" onclick="@OnPrevPage">&larr; Prev</button>
-}
-@if (ItemCount < 30)
-{
-    <button type="button" class="btn btn-link btn-xs" disabled="disabled">More &rarr;</button>
-}
-else
-{
-    <button type="button" class="btn btn-link btn-xs" onclick="@OnNextPage">More &rarr;</button>
-}
+﻿<button type="button" class="btn btn-link btn-xs" onclick="@OnPreviousClick" disabled="@(CurrentPage < 2)">&larr; Prev</button>
+<button type="button" class="btn btn-link btn-xs" onclick="@OnNextClick" disabled="@(ItemCount < 30)">More &rarr;</button>
+
 @functions{
     [Parameter]
     Action OnPreviousClick { get; set; }
@@ -23,13 +10,4 @@ else
     int CurrentPage { get; set; }
     [Parameter]
     int ItemCount { get; set; }
-
-    void OnPrevPage()
-    {
-        OnPreviousClick?.Invoke();
-    }
-    void OnNextPage()
-    {
-        OnNextClick?.Invoke();
-    }
 }
