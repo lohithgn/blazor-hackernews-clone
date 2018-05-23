@@ -10,7 +10,7 @@ namespace BlazorHackerNewsClone.Services
 {
     public class HackerNewsServiceClient
     {
-        private string baseUrl = "http://node-hnapi.herokuapp.com";
+        private string baseUrl = "https://node-hnapi.herokuapp.com";
         private HttpClient _client=null;
 
         public HackerNewsServiceClient(HttpClient httpClient)
