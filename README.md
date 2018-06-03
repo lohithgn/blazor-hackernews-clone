@@ -1,6 +1,8 @@
 # blazor-hackernews-clone
 Hacker News Clone built using Blazor (0.3.0). 
 
+Live site here : https://gnl.me/blazorhn
+
 # Pre-requisites
 
 Blazor Hacker News Clone is built with Blazor 0.3.0. You will need to first make sure you have Blazor 0.3.0 is installed. Follow the below instruction to set up Blazor 0.3.0:
