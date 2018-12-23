@@ -1,7 +1,7 @@
 # blazor-hackernews-clone
 Hacker News Clone built using Blazor (0.3.0). 
 
-Live site here : https://gnl.me/blazorhn
+Live site here : [http://blazorhackernews.surge.sh/](http://blazorhackernews.surge.sh/)
 
 # Pre-requisites
 
