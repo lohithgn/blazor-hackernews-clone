@@ -5,11 +5,17 @@ Live site here : https://gnl.me/blazorhn
 
 # Pre-requisites
 
-Blazor Hacker News Clone is built with Blazor 0.3.0. You will need to first make sure you have Blazor 0.3.0 is installed. Follow the below instruction to set up Blazor 0.3.0:
+Blazor Hacker News Clone is built with Blazor 0.7.0. You will need to first make sure you have Blazor 0.7.0 is installed. Follow below instructions to set up Blazor 0.7.0:
 
-1. Install the [.NET Core 2.1 SDK](https://go.microsoft.com/fwlink/?linkid=873092) (2.1.300-preview2-008533 or later).
-2. Install [Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=873093) (15.7 Preview 5 or later) with the ASP.NET and web development workload selected.
-3. Install the latest [Blazor Language Services](https://go.microsoft.com/fwlink/?linkid=870389) extension from the Visual Studio Marketplace.
+1. Install [.NET Core 2.1 SDK](https://go.microsoft.com/fwlink/?linkid=873092) (2.1.500 or later).
+2. Install [Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=873093) (15.9 or later) with the ASP.NET and web development workload selected.
+3. Install the latest [Blazor Language Services extension](https://go.microsoft.com/fwlink/?linkid=870389) extension from the Visual Studio Marketplace.
+4. On command line, Install the Blazor templates with below command
+```
+
+dotnet new -i Microsoft.AspNetCore.Blazor.Templates
+
+```
 
 # Using the code
 

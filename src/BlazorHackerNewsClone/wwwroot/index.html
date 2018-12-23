@@ -27,19 +27,20 @@
         </div>
     </app>
 
-    <script type="blazor-boot">
-    </script>
+    <script src="_framework/blazor.webassembly.js"></script>
     <script>
-        Blazor.registerFunction('RawHtml', function (element, value) {
-            console.log("element", element);
-            element.innerHTML = value;
-            for (var i = element.childNodes.length - 1; i >= 0; i--) {
-                var childNode = element.childNodes[i];
-                element.parentNode.insertBefore(childNode, element);
+        window.blazorHackerNewsCloneFunctions = {
+            RawHtml: function (element, value) {
+                console.log("element", element);
+                element.innerHTML = value;
+                for (var i = element.childNodes.length - 1; i >= 0; i--) {
+                    var childNode = element.childNodes[i];
+                    element.parentNode.insertBefore(childNode, element);
+                }
+                element.parentNode.removeChild(element);
+                return true;
             }
-            element.parentNode.removeChild(element);
-            return true;
-        });
+        };
     </script>
 </body>
 </html>
