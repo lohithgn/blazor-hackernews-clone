@@ -6,7 +6,9 @@
 
     protected override void OnAfterRender()
     {
-        if(!string.IsNullOrEmpty(Content))
-            Microsoft.AspNetCore.Blazor.Browser.Interop.RegisteredFunction.Invoke<bool>("RawHtml", Span, Content);
+        if (!string.IsNullOrEmpty(Content))
+        {
+            JSRuntime.Current.InvokeAsync<bool>("blazorHackerNewsCloneFunctions.RawHtml", Span, Content);
+        }
     }
 }
