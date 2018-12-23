@@ -1,0 +1,10 @@
+{
+  "name": "blazorhackernewsclone",
+  "version": "1.0.0",
+  "description": "Blazor Hacker News Clone",
+  "author": "kashyapa",
+  "license": "MIT",
+  "devDependencies": {
+    "surge": "0.20.1"
+  }
+}
